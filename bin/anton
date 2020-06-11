@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+set -e
+
+unset CDPATH
+
+case $1 in
+
+  git)
+    git pull
+
+    ;;
+
+  flutter)
+    flutter --version
+    ;;
+
+  function)
+    function my_function() {
+    echo 'Yes anton this is your function' $1
+    }
+    my_function
+  ;;
+
+  *)
+    echo "Swyrm Flutter CLI 0.0.1"
+    echo "PID:$$"
+    ;;
+esac
+
+
+
+
+
+
+
+while getopts ":a:" opt; do
+  case $opt in
+    a)
+      echo "-a was triggered, Parameter: $OPTARG" >&2
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
