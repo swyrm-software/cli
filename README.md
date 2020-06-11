@@ -7,4 +7,4 @@ Swyrm CLI tools for increased productivity.
 
  ## Commands
  <pre>swyrm git</pre>
- Pulls latest git code and shows all commands news to oldest per branch.
+ Pulls latest git commands per branch and shows all commands in descending order per branch.
